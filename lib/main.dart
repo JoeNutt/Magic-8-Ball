@@ -17,6 +17,26 @@ class BallPage extends StatelessWidget {
           'Ask Me Anything',
         ),
       ),
+      body: Ball(),
+    );
+  }
+}
+
+class Ball extends StatefulWidget {
+  @override
+  _BallState createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: FlatButton(
+        onPressed: () {
+          print('click click');
+        },
+        child: Image.asset('images/ball1.png'),
+      ),
     );
   }
 }
